@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import { Provider } from 'react-redux';
-import App from './App';
-import { store } from './app/store';
-import * as serviceWorker from './serviceWorker';
+import { store } from './@store/configureStore';
 import AppThemeProvider from './@themes/theme';
+import App from './App';
+import './index.css';
+import * as serviceWorker from './serviceWorker';
 
 // Open Source fonts
 import '@fontsource/roboto/300.css';
