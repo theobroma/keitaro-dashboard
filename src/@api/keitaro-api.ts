@@ -1,7 +1,7 @@
 import { instance } from './api';
 
 export const KeitaroAPI = {
-  fetchAffiliateNetworks() {
+  getAffiliateNetworks() {
     return instance.get<any>(`/affiliate_networks`);
   },
 };

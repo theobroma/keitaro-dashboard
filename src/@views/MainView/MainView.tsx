@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react';
 import { Grid, Paper, styled } from '@mui/material';
 import Box from '@mui/material/Box';
+import React, { useEffect } from 'react';
+import { getAffiliateNetworksTC } from '../../@store/affiliate-networks/slice';
 import { useAppDispatch } from '../../@store/configureStore';
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -14,10 +15,7 @@ const MainView: React.FC = () => {
   const dispatch = useAppDispatch();
 
   useEffect(() => {
-    // if (lat === null && lon === null) {
-    //   dispatch(setUserCoordinatesTC());
-    // }
-    console.log('fetch');
+    dispatch(getAffiliateNetworksTC());
   }, [dispatch]);
 
   return (
